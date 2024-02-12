@@ -1,0 +1,41 @@
+<mat-card class="block-card">
+    <mat-card-header>
+        <div mat-card-avatar class="block-header-image"></div>
+        <mat-card-title>Square</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <label for="side">Side Length: </label>
+        <input type="number" name="side" [(ngModel)]="input">
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="CalculateSquare()">Calculate Square</button>
+    </mat-card-actions>
+</mat-card>
+
+<table mat-table [dataSource]="SquareResults">
+    <ng-container matColumnDef="demo-position">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+      </ng-container>
+    
+      <!-- SideLength Column -->
+      <ng-container matColumnDef="demo-area">
+        <th mat-header-cell *matHeaderCellDef>Side Længde</th>
+        <td mat-cell *matCellDef="let element"> {{element.sideLength}} </td>
+      </ng-container>
+    
+      <!-- Area Column -->
+      <ng-container matColumnDef="demo-circumference">
+        <th mat-header-cell *matHeaderCellDef>Areal(side*side)</th>
+        <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+      </ng-container>
+    
+      <!-- Circumference Column -->
+      <ng-container matColumnDef="demo-sideLength">
+        <th mat-header-cell *matHeaderCellDef>Omkreds(side*4)</th>
+        <td mat-cell *matCellDef="let element"> {{element.circumference}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

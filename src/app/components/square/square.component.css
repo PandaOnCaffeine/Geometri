@@ -1,0 +1,9 @@
+mat-card {
+    margin: 10px;
+    color: white;
+}
+
+mat-card-content {
+    color: black;
+    background-color: white;
+}

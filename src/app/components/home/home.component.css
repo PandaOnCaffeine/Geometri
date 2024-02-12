@@ -1,0 +1,17 @@
+.block-card {
+    max-width: 400px;
+    color: white;
+}
+
+.block-header-image {
+    background-image: url('../../../assets/Blocks.jpg');
+    background-size: cover;
+}
+
+.card-text {
+    margin: 5px 0;
+}
+
+.card-container {
+    display: flex;
+}
