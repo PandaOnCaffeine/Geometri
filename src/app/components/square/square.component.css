@@ -3,7 +3,8 @@ mat-card {
     color: white;
 }
 
-mat-card-content {
-    color: black;
-    background-color: white;
+.input-felt {
+    width: 200px;
+    height: 70px;
+    margin: 0 20px;
 }

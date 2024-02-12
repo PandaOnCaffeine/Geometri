@@ -33,7 +33,7 @@ export class RectangleComponent {
 
   @ViewChild(MatTable) table!: MatTable<RectangleData>;
 
-  CalculateSquare() {
+  Calculate() {
     const newRectangle = new Rectangle(this.inputA, this.inputB);
     const newData: RectangleData = {
       position: this.RectangleResults.length + 1,

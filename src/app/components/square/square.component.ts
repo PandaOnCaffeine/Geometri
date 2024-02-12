@@ -7,6 +7,8 @@ import { Square } from '../../classes/square';
 import { MatCardModule } from '@angular/material/card';
 import { MatTable, MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 export interface SquareData {
   position: number;
@@ -18,7 +20,7 @@ export interface SquareData {
 @Component({
   selector: 'app-square',
   standalone: true,
-  imports: [MatCardModule, MatTableModule, CommonModule, FormsModule,MatButtonModule],
+  imports: [MatCardModule, MatTableModule, CommonModule, FormsModule, MatButtonModule, MatInputModule, MatFormFieldModule],
   templateUrl: './square.component.html',
   styleUrl: './square.component.css'
 })
@@ -29,7 +31,7 @@ export class SquareComponent {
 
   @ViewChild(MatTable) table!: MatTable<SquareData>;
 
-  CalculateSquare() {
+  Calculate() {
     if (this.input == undefined) {
       console.error("no input");
     } else {
